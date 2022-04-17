@@ -25,14 +25,4 @@ function getPhotosByNum_Licence($Num_Licence) {
 }
 
 
-/*
-if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
-    // prog principal de test
-    header('Content-Type:text/plain');
-
-    echo "\n getPhotosByIdR(1) : \n";
-    print_r(getPhotosByIdR(1));
-
-}
-*/
 ?>

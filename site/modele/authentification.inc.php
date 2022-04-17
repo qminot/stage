@@ -6,6 +6,7 @@ function login($MailU, $MdpU) {
     if (!isset($_SESSION)) {
         session_start();
     }
+    
 
     $util = getUtilisateurByMailU($MailU);
     $mdpBD = $util["MdpU"];

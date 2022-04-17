@@ -37,15 +37,15 @@ function getUtilisateurByMailU($MailU) {
     return $resultat;
 }
 
-function addUtilisateur($MailU, $MdpU, $Pseudo) {
+function addUtilisateur($MailU, $MdpU, $PseudoU) {
     try {
         $cnx = connexionPDO();
 
         $mdpUCrypt = crypt($MdpU, "sel");
-        $req = $cnx->prepare("insert into utilisateur (MailU, MdpU, Pseudo) values(:MailU,:MdpU,:Pseudo)");
+        $req = $cnx->prepare("insert into utilisateur (MailU, MdpU, PseudoU) values(:MailU,:MdpU,:PseudoU)");
         $req->bindValue(':MailU', $MailU, PDO::PARAM_STR);
         $req->bindValue(':MdpU', $mdpUCrypt, PDO::PARAM_STR);
-        $req->bindValue(':Pseudo', $Pseudo, PDO::PARAM_STR);
+        $req->bindValue(':PseudoU', $PseudoU, PDO::PARAM_STR);
         
         $resultat = $req->execute();
     } catch (PDOException $e) {
@@ -55,7 +55,7 @@ function addUtilisateur($MailU, $MdpU, $Pseudo) {
     return $resultat;
 }
 
-
+/*
 
 if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
     // prog principal de test
@@ -69,5 +69,5 @@ if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
 
     echo "addUtilisateur('mathieu.capliez3@gmail.com', 'azerty', 'mat') : \n";
     addUtilisateur("mathieu.capliez3@gmail.com", "azerty", "mat");
-}
+}*/
 ?>

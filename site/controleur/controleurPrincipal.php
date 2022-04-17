@@ -5,10 +5,13 @@ function controleurPrincipal($action) {
     $lesActions["defaut"] = "listeJoueurs.php";
     $lesActions["liste"] = "listeJoueurs.php";
     $lesActions["equipe"] = "equipe.php";
-    $lesActions["listeequipe"] = "listeEquipes.php";
-    $lesActions["recherche"] = "rechercheJoueur.php";
-    
+    $lesActions["connexion"] = "connexion.php";
+    $lesActions["profil"] = "monProfil.php";
+    $lesActions["inscription"] = "inscription.php";
+    $lesActions["detail"] = "detailJoueur.php";
 
+    
+    
     if (array_key_exists($action, $lesActions)) {
         return $lesActions[$action];
     } 

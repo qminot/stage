@@ -52,11 +52,12 @@ div.photoCard>img{
 div.descrCard{
     position : relative;
     top:0px;
+	
 }
 div.tagCard{
     position:absolute;
     bottom:10px;
-    width : 180px;
+    width : 80px;
     text-align: right;
 }
 

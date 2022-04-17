@@ -11,6 +11,7 @@
             <input type="text" name="Poste" placeholder="Poste" value="<?= $Poste ?>" /><br />
             <?php
             break;
+            
     }
     ?>
     <br /><br />

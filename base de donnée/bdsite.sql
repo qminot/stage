@@ -35,9 +35,7 @@ INSERT INTO Joueur VALUES (1648160,'DANGUY','Tom','passeur',1, 'Nationale 2','Fr
 (1875497,'Dambreville','Tanguy','receptionneur attaquant',5,'M21','Français','M'),
 (2408097,'Pham Ba','Aristote','libero',6,'M21','Français','M'),
 (2202517,'Fofana','Mamadou','pointu',7,'M21','Français','M'),
-(2360301,'Minot','Quentin','central',8,'M21','Français','M'),
 (2444556,'Li','Thomas','receptionneur attaquant',11,'M21','Français','M'),
-(1867768,'Wetzel','Oscar','receptionneur attaquant',14,'M21','Français','M'),
 (2506555,'Dumagenc','Alexian','central',15,'M21','Français','M'),
 (2247712,'Jobart','Phileas','passeur',17,'M21','Français','M'),
 (2050741,'Merched','Raphael','passeur',18,'M21','Français','M'),
@@ -63,11 +61,11 @@ INSERT INTO Entraineur VALUES(1514826,'Delocty','Olivier', 'Nationale 2'),
 CREATE TABLE Utilisateur(
    MailU VARCHAR(50),
    MdpU VARCHAR(50),
-   Pseudo VARCHAR(50),
+   PseudoU VARCHAR(50),
    PRIMARY KEY(MailU));
 
 Insert Into Utilisateur VALUES('test@gmail','mdp123','Quentin'),
-('test2@gmail','mdd456','Paul');
+('test2@gmail','mdp456','Paul');
 
 
 CREATE TABLE Photo(
@@ -92,9 +90,7 @@ INSERT Into Photo VALUES(1,'tom.jpg',1648160),
 (12,'tanguy.jpg',1875497),
 (13,'aristote.jpg',2408097),
 (14,'mamadou.jpg',2202517),
-(15,'profil.jpg',2360301),
 (16,'thomas.jpg',2444556),
-(17,'oscar.jpg',1867768),
 (18,'inconnu.jpg',2506555),
 (19,'phileas.jpg',2247712),
 (20,'raphael.jpg',2050741),
