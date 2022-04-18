@@ -6,7 +6,7 @@ CREATE TABLE Equipe(
    PRIMARY KEY(Nom_Equipe)
 );
 INSERT INTO Equipe VALUES('Nationale 2','Lundi','Mardi', 'Jeudi'),
-('M21','Lundi','Mercredi', 'Vendredri');
+('M21','Lundi','Mercredi', 'Vendredi');
 
 CREATE TABLE Joueur(
    Num_Licence INT,

@@ -8,7 +8,8 @@ include_once "$racine/modele/bd.equipe.inc.php";
 // recuperation des donnees GET, POST, et SESSION
 ;
 $menuVolley = array();
-
+$menuVolley[] = Array("url"=>"#M21","label"=>"M21");
+$menuVolley[] = Array("url"=>"#N2","label"=>"N2");
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
 $listeequipes = getEquipes();
 

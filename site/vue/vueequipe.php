@@ -1,5 +1,5 @@
 <h1>Les équipes du PAC</h1>
-<h2 >
+<h2 id="M21">
 L'équipe M21:
 </h2>
 <a href="./?action=equipe"> <img src="images/M21.jpg" width="450" height="380"  alt="logo" /></a>
@@ -25,7 +25,7 @@ L'équipe M21:
 
 
      
-        <h2 >
+        <h2 id="N2" >
 L'équipe de N2:
 </h2>
 <a href="./?action=equipe"> <img src="images/equipe.jpg" width="451" height="381"  alt="logo" /></a>

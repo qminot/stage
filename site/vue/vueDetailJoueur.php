@@ -1,10 +1,10 @@
 
-<h1><?= $unJoueur['Nom_joueur']; ?>
+<h1><?= $unJoueur['Prenom_Joueur']; ?>
 
 <?php if ($aimer != false) { ?>
-    <a href="./?action=aimer&Num_Licence=<?= $unJoueur['Nom_Joueur']; ?>" ><img class="aimer" src="images/aime.png" width="75" height="80" alt="j'aime ce joueur"></a>
+    <a href="./?action=aimer&Num_Licence=<?= $unJoueur['Num_Licence']; ?>" ><img class="aimer" src="images/aime.png" width="75" height="80" alt="j'aime ce joueur"></a>
 <?php } else { ?>
-    <a href="./?action=aimer&Num_Licence=<?= $unJoueur['Nom_Joueur']; ?>" ><img class="aimer" src="images/aimepas.png" width="75" height="80" alt="je n'aime pas ce joueur"></a>
+    <a href="./?action=aimer&Num_Licence=<?= $unJoueur['Num_Licence']; ?>" ><img class="aimer" src="images/aimepas.png" width="75" height="80" alt="je n'aime pas ce joueur"></a>
 <?php } ?>
 
 </h1>

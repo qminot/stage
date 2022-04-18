@@ -10,7 +10,7 @@ function controleurPrincipal($action) {
     $lesActions["inscription"] = "inscription.php";
     $lesActions["detail"] = "detailJoueur.php";
     $lesActions["deconnexion"] = "deconnexion.php";
-    
+    $lesActions["aimer"] = "aimer.php";
     
     if (array_key_exists($action, $lesActions)) {
         return $lesActions[$action];
