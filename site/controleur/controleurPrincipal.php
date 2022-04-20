@@ -11,7 +11,7 @@ function controleurPrincipal($action) {
     $lesActions["detail"] = "detailJoueur.php";
     $lesActions["deconnexion"] = "deconnexion.php";
     $lesActions["aimer"] = "aimer.php";
-    
+    $lesActions["recherche"] = "rechercheJoueur.php";
     if (array_key_exists($action, $lesActions)) {
         return $lesActions[$action];
     } 

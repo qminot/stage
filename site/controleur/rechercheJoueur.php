@@ -7,7 +7,7 @@ include_once "$racine/modele/bd.photo.inc.php";
 
 // creation du menu burger
 $menuBurger = array();
-$menuBurger[] = Array("url"=>"./?action=recherche&critere=poste","label"=>"Recherche par poste");
+$menuBurger[] = Array("url"=>"./?action=recherche&critere=Poste","label"=>"Recherche par poste");
 
 
 // critere de recherche par defaut
@@ -17,9 +17,9 @@ if (isset($_GET["critere"])) {
 }
 
 // recuperation des donnees GET, POST, et SESSION
-if (isset($_GET["critere"])){
+/*if (isset($_GET["critere"])) {
     $critere = $_GET["critere"];
-}
+}*/
 $Poste="";
 if (isset($_POST["Poste"])){
     $Poste = $_POST["Poste"];
@@ -33,7 +33,7 @@ if (isset($_POST["Poste"])){
 switch($critere){
     case 'Poste':
         // recherche par nom
-        $listeJoueurs = getJoueursByPoste($Poste);
+        $listejoueurs = getJoueursByPoste($Poste);
         break;
 
     

@@ -9,7 +9,7 @@ include_once "$racine/modele/bd.photo.inc.php";
 // recuperation des donnees GET, POST, et SESSION
 ;
 $menuVolley = array();
-$menuVolley[] = Array("url"=>"./?action=recherche&critere=poste","label"=>"Recherche par poste");
+$menuVolley[] = Array("url"=>"./?action=recherche&critere=Poste","label"=>"Recherche par poste");
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
 $listejoueurs = getJoueurs();
 

@@ -2,11 +2,12 @@
 <h1>Liste des joueurs</h1>
 
 <?php
-for ($i = 0; $i < count($listeJoueurs); $i++) {
+for ($i = 0; $i < count($listejoueurs); $i++) {
     ?>
 
 
     <?php
+    $lesPostes = getJoueursByPoste($listejoueurs[$i]['Poste']);
     $LesPhotos = getPhotosByNum_Licence($listejoueurs[$i]['Num_Licence']);
     
     ?>
@@ -19,10 +20,12 @@ for ($i = 0; $i < count($listeJoueurs); $i++) {
 
 
         </div>
-        <div class="descrCard"><?php echo "<a href='./?action=detail&Num_Licence=" . $listejoueurs[$i]['Num_Licence'] . "'>" . $listejoueurs[$i]['Nom_joueur'] . "</a>"; ?>
-            <br />
-            <?= $listejoueurs[$i]["Nom_Joueur"] ?>
-            <?= $listejoueurs[$i]["Prenom_Joueur"] ?>
+        <div class="descrCard"><?php echo "<a href='./?action=detail&Num_Licence=" . $listejoueurs[$i]['Num_Licence'] . "'>" . $listejoueurs[$i]['Nom_Joueur'] .' '.$listejoueurs[$i]["Prenom_Joueur"]. "</a>"; ?>
+           
+           
+         
+       
+ 
             <br />
             <?= $listejoueurs[$i]["Poste"] ?>
             <br />
@@ -31,7 +34,7 @@ for ($i = 0; $i < count($listeJoueurs); $i++) {
         </div>
         <div class="tagCard">
             <ul id="tagFood">		
-
+ 
             </ul>
 
 
