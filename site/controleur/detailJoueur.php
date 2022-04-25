@@ -11,11 +11,6 @@ include_once "$racine/modele/bd.aimer.inc.php";
 
 // creation du menu burger
 $menuBurger = array();
-$menuBurger[] = Array("url"=>"#top","label"=>"Le restaurant");
-$menuBurger[] = Array("url"=>"#adresse","label"=>"Adresse");
-$menuBurger[] = Array("url"=>"#photos","label"=>"Photos");
-$menuBurger[] = Array("url"=>"#horaires","label"=>"Horaires");
-$menuBurger[] = Array("url"=>"#crit","label"=>"Critiques");
 
 // recuperation des donnees GET, POST, et SESSION
 $Num_Licence = $_GET["Num_Licence"];

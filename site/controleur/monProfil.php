@@ -6,6 +6,7 @@ include_once "$racine/modele/authentification.inc.php";
 include_once "$racine/modele/bd.utilisateur.inc.php";
 include_once "$racine/modele/bd.equipe.inc.php";
 include_once "$racine/modele/bd.joueur.inc.php";
+include_once "$racine/modele/bd.photo.inc.php";
 
 // creation du menu burger
 $menuBurger = array();
@@ -17,9 +18,9 @@ $menuBurger[] = Array("url"=>"./?action=profil","label"=>"Consulter mon profil")
 
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
 if (isLoggedOn()){
-    $mailU = getMailULoggedOn();
-    $util = getUtilisateurByMailU($mailU);
-
+    $MailU = getMailULoggedOn();
+    $util = getUtilisateurByMailU($MailU);
+    $mesJoueursAimes = getJoueursAimesByMailU($MailU);
     // traitement si necessaire des donnees recuperees
 
 

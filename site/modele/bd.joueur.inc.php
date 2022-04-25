@@ -34,6 +34,25 @@ function getJoueursByPoste($Poste) {
     }
     return $resultat;
 }*/
+
+function getJoueursAimesByMailU($MailU) {
+    $resultat = array();
+
+    try {
+        $cnx = connexionPDO();
+        $req = $cnx->prepare("select joueur.* from joueur,aimer where joueur.Num_Licence = aimer.Num_Licence and MailU = :MailU");
+        $req->bindValue(':MailU', $MailU, PDO::PARAM_STR);
+        $req->execute();
+
+        while ($ligne = $req->fetch(PDO::FETCH_ASSOC)) {
+            $resultat[] = $ligne;
+        }
+    } catch (PDOException $e) {
+        print "Erreur !: " . $e->getMessage();
+        die();
+    }
+    return $resultat;
+}
 function getJoueursByPoste($Poste) {
     $resultat = array();
 
@@ -101,6 +120,8 @@ function getJoueursByNom($Nom_Joueur) {
     }
     return $resultat;
 }
+
+       
 
 
 

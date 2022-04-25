@@ -16,5 +16,6 @@
     ?>
     <br /><br />
     <input type="submit" value="Rechercher" />
-
+    <br />
+les diférrents postes au volley-ball sont:<br />central<br />receptionneur attaquant<br />libero<br />passeur<br />pontu<br />
 </form>
