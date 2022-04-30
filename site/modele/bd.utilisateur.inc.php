@@ -55,19 +55,6 @@ function addUtilisateur($MailU, $MdpU, $PseudoU) {
     return $resultat;
 }
 
-/*
 
-if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
-    // prog principal de test
-    header('Content-Type:text/plain');
 
-    echo "getUtilisateurs() : \n";
-    print_r(getUtilisateurs());
-
-    echo "getUtilisateurByMailU(\"mathieu.capliez@gmail.com\") : \n";
-    print_r(getUtilisateurByMailU("mathieu.capliez@gmail.com"));
-
-    echo "addUtilisateur('mathieu.capliez3@gmail.com', 'azerty', 'mat') : \n";
-    addUtilisateur("mathieu.capliez3@gmail.com", "azerty", "mat");
-}*/
 ?>

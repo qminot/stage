@@ -17,23 +17,7 @@ function getJoueurByNum_Licence($Num_Licence) {
         die();
     }
     return $resultat;
-}/*
-function getJoueursByPoste($Poste) {
-    $resultat = array();
-    try {
-        $cnx = connexionPDO();
-        $req = $cnx->prepare("select * from joueur where Poste like :Poste");
-        $req->bindValue(':Poste', "%".$Poste."%", PDO::PARAM_STR);
-
-        $req->execute();
-
-        $resultat = $req->fetch(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        print "Erreur !: " . $e->getMessage();
-        die();
-    }
-    return $resultat;
-}*/
+} 
 
 function getJoueursAimesByMailU($MailU) {
     $resultat = array();
@@ -99,27 +83,7 @@ function getJoueurs() {
 
 
 
-function getJoueursByNom($Nom_Joueur) {
-    $resultat = array();
-
-    try {
-        $cnx = connexionPDO();
-        $req = $cnx->prepare("select * from joueur where Nom_joueur like :Nom_Joueur");
-        $req->bindValue(':Nom_Joueur', "%".$Nom_Joueur."%", PDO::PARAM_STR);
-
-        $req->execute();
-
-        $ligne = $req->fetch(PDO::FETCH_ASSOC);
-        while ($ligne) {
-            $resultat[] = $ligne;
-            $ligne = $req->fetch(PDO::FETCH_ASSOC);
-        }
-    } catch (PDOException $e) {
-        print "Erreur !: " . $e->getMessage();
-        die();
-    }
-    return $resultat;
-}
+ 
 
        
 

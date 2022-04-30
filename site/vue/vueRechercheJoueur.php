@@ -1,5 +1,5 @@
 
-<h1>Recherche d'un joueur par poste </h1>
+<h1>Recherche de joueur par poste </h1>
 <form action="./?action=recherche&critere=<?= $critere ?>" method="POST">
 
 
