@@ -2,9 +2,9 @@
 <h1>Liste des joueurs</h1>
 
 <?php
-for ($i = 0; $i < count($listejoueurs); $i++) {
+foreach  ($listejoueurs as $unJoueur) {
     
-    $LesPhotos = getPhotosByNum_Licence($listejoueurs[$i]['Num_Licence']);
+    $LesPhotos = getPhotosByNum_Licence($unJoueur->getNum_Licence());
     ?>
 
     <div class="card">
@@ -15,7 +15,7 @@ for ($i = 0; $i < count($listejoueurs); $i++) {
 
 
         </div>
-        <div class="descrCard"><?php echo "<a href='./?action=detail&Num_Licence=" . $listejoueurs[$i]['Num_Licence'] . "'>" . $listejoueurs[$i]['Nom_Joueur'] .' '.$listejoueurs[$i]["Prenom_Joueur"]. "</a>"; ?>
+        <div class="descrCard"><?php echo "<a href='./?action=detail&Num_Licence=" . $unJoueur->getNum_Licence() . "'>" . $unJoueur->getNom_Joueur() .' '.$unJoueur->getPrenom_Joueur(). "</a>"; ?>
            
         </div>
         <div class="tagCard">
@@ -27,15 +27,11 @@ for ($i = 0; $i < count($listejoueurs); $i++) {
         </div>
 
     </div>
-
-
-
-
-
-    <?php
+<?php
 }
 
 
 ?>
+ 
 
 
